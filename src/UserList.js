@@ -36,7 +36,7 @@ function UserList() {
             <User user={users[1]}/>
             <User user={users[2]}/> */}
             {
-                users.map(
+                users.map(  
                     b => (<User a ={b} key={b.id}/>)
                 )
                 
