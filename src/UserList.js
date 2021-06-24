@@ -81,7 +81,7 @@ function UserList({users, onRemove, onToggle}) {
                 />
             ))}
         </div>
-    );
+    ); 
 }
 
 export default React.memo(
