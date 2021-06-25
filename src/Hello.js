@@ -1,4 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react';
+
+class Hello extends Component {
+    static defaultProps ={
+        name:'이름없음'
+    }
+    render() {
+        const { color, isSpecial, name } = this.props;
+        return (
+            <div style={{color}}>
+                {isSpecial && <b>*</b>}
+                {name}
+            </div>
+        )
+    }
+}
+
 
 // function Hello(props) { //function Hello({color, name}) {
 //     console.log(props);
@@ -25,19 +41,21 @@ import React from 'react';
 
 // }
 
-function Hello({ color, name, isSpecial }) {
-    return (
-        <div style={{
-            color
-        }}>
-            {isSpecial && <b>*</b>} {/*두개 비교*/}
-            {/* {isSpecial ? <b>*</b> : null} */}  {/*내용이 바뀌어야할때*/}
-            안녕하세요 {name}
-        </div>
-    );
-}
+// function Hello({ color, name, isSpecial }) {
+//     return (
+//         <div style={{
+//             color
+//         }}>
+//             {isSpecial && <b>*</b>} {/*두개 비교*/}
+//             {/* {isSpecial ? <b>*</b> : null} */}  {/*내용이 바뀌어야할때*/}
+//             안녕하세요 {name}
+//         </div>
+//     );
+// }
 
-Hello.defaultProps = {
-    name: '이름없음' //name이 없을때 기본값
-};
+// Hello.defaultProps = {
+//     name: '이름없음' //name이 없을때 기본값
+// };
+
+
 export default Hello;
