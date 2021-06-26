@@ -29,7 +29,7 @@ const initialState = {
     {
         id:3,
         username: 'liz',
-        email: '왜이러니',
+        email: 'liz@naver.com',
         active: false,
     }
   ]
